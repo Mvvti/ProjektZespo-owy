@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Projekt zespołowy</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/core.css">
+    <link rel="stylesheet" href="style/vote.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Projekt Zespołowy</h1>
+
+        <nav>
+            <button id="popAuth"></button>
+        </nav>
+    </header>
+
+    <main>
+        <noscript>
+            <p>Ta aplikacja wymaga właczonego javascriptu.</p>
+        </noscript>
+        <div class="overlay" id="auth-overlay">
+
+            <form id="auth" class="surface">
+                <h4>Logowanie/rejestracja</h4>
+                <div class="row">
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </div>
+    
+                <div class="row">
+                    <label>Haslo</label>
+                    <input type="password" name="password">
+                </div>
+                <div>
+                    <button id="login">ZALOGUJ</button>
+                    <button id="register">ZAREJESTRUJ</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="overlay" id="inquiry-overlay">
+
+            <form id="inquiry" class="surface">
+                <div class="row">
+                    <label>Tytuł</label>
+                    <input name="title">
+                </div>
+    
+                <div class="row">
+                    <label>Pytanie</label>
+                    <input name="question">
+    
+                    <ul id="questions"></ul>
+                    <button id="add-question">DODAJ PYTANIE</button>
+                </div>
+
+                <button id="inquiry-submit">UTWÓRZ</button>
+            </form>
+
+        </div>
+
+        <section id="inquiry-list">
+
+        </section>
+    
+        <button id="new-inquiry">+</button>
+
+        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+        <script src="script/index.js"></script>
+        <script src="script/user.js"></script>
+        <script src="script/database.js"></script>
+    </main>
+
+    <footer>
+        &copy; Copyright 2020
+    </footer>
+</body>
+
+</html>
